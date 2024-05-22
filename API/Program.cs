@@ -14,8 +14,17 @@ var JWTSetting = builder.Configuration.GetSection("JWTSetting");
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(opt=>opt.UseSqlite("Data Source=auth.db"));
 
-builder.Services.AddIdentity<AppUser,IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
-.AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, IdentityRole>(options =>
+    {
+        options.Lockout = new LockoutOptions
+        {
+            AllowedForNewUsers = true,
+            DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5),
+            MaxFailedAccessAttempts = 5,
+        };
+    })
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(opt=>{
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -29,6 +38,7 @@ builder.Services.AddAuthentication(opt=>{
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime =true,
+        ClockSkew = TimeSpan.Zero,
         ValidateIssuerSigningKey = true,
         ValidAudience  = JWTSetting["ValidAudience"],
         ValidIssuer=JWTSetting["ValidIssuer"],

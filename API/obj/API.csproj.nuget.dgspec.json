@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JWT\\JwtAuth\\API\\API.csproj": {}
+    "/home/miguel/Documentos/GitHub/Ng17Dotnet8RoleBaseAuthJWT/API/API.csproj": {}
   },
   "projects": {
-    "D:\\JWT\\JwtAuth\\API\\API.csproj": {
+    "/home/miguel/Documentos/GitHub/Ng17Dotnet8RoleBaseAuthJWT/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JWT\\JwtAuth\\API\\API.csproj",
+        "projectUniqueName": "/home/miguel/Documentos/GitHub/Ng17Dotnet8RoleBaseAuthJWT/API/API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\JWT\\JwtAuth\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\pushpa\\.nuget\\packages\\",
-        "outputPath": "D:\\JWT\\JwtAuth\\API\\obj\\",
+        "projectPath": "/home/miguel/Documentos/GitHub/Ng17Dotnet8RoleBaseAuthJWT/API/API.csproj",
+        "packagesPath": "/home/miguel/.nuget/packages/",
+        "outputPath": "/home/miguel/Documentos/GitHub/Ng17Dotnet8RoleBaseAuthJWT/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pushpa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/miguel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/miguel/.dotnet/sdk/8.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
